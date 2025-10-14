@@ -1,0 +1,6 @@
+title: Rakin's Page
+description: My markdown-powered website
+baseurl: ""
+url: "https://towfiq-rakin.github.io"
+theme: minima
+markdown: kramdown
