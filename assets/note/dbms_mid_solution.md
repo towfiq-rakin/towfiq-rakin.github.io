@@ -121,4 +121,4 @@ WHERE quantity_available = 0 and warehouse = "Central Warehouse";
 #### Question 5
 ###### a. Draw the **E-R Diagram** of a online grocery shop database considering three entities: *customer, product, order.*<span style="float: right; ">10 </span>
 **Ans:** 
-![E-R Diagram](../assets/img/Pasted_image_20251014204033.png)
+![E-R Diagram](../img/Pasted_image_20251014204033.png)
