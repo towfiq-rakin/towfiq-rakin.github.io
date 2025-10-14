@@ -4,3 +4,8 @@ baseurl: ""
 url: "https://towfiq-rakin.github.io"
 theme: minima
 markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  math_engine_opts: {}
+
