@@ -3,8 +3,8 @@ layout: default
 title: DBMS Mid Solution
 ---
 
-#### Question 1
-###### a. Present a comparative overview among the different levels of abstraction of a database management system. <span style="float: right; ">06 </span>
+## Question 1
+#### a. Present a comparative overview among the different levels of abstraction of a database management system. <span style="float: right; ">06 </span>
 
 **Ans:** 
 1. **Physical level:** 
@@ -20,15 +20,16 @@ title: DBMS Mid Solution
 3. **View level:**
 	   Application programs hide details of data types. Views can also hide information (such as an employee’s salary) for security purposes.
 
-###### b. What is **Data Model**? Write down the name of two existing data model.<span style="float: right; ">04 </span>
+#### b. What is **Data Model**? Write down the name of two existing data model.<span style="float: right; ">04 </span>
 **Ans:** Underlying the structure of a database is the data model: a collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints. A data model provides a way to describe the design of a database at the physical, logical, and view levels.
 Among four  different categories, two models are:
 1. **Relational Model:** The relational model uses a collection of tables to represent both data and relationships among those data.
 2. **Entity-Relationship Model:** The entity-relationship (E-R) data model uses a collection of basic objects to design a database.
 
 ---
-#### Question 2
-###### a. Find the **Primary Key** for all the tables with brief justification of the reason to choose the attribute in the primary key: <span style="float: right; ">06 </span>
+
+## Question 2
+#### a. Find the **Primary Key** for all the tables with brief justification of the reason to choose the attribute in the primary key: <span style="float: right; ">06 </span>
 *order* (order_id, product_id, quantity, unit, unit_price, discount, bill)
 *warehouse_stock* (warehouse_id, product_id, quantity, last_updated)
 *order_details*(customer_id, product_id, warehouse_location, order_date, quantity, shipping status)
@@ -45,7 +46,7 @@ Among four  different categories, two models are:
 	**Primary Key:** _(customer_id, product_id, order_date)_  
 	**Justification:**  A customer can order the same product on different dates. Hence, _(customer_id, product_id, order_date)_ uniquely represents each order transaction.
 
-###### b. Write the query in SQL to create the `order`relation.<span style="float: right; ">04 </span>
+#### b. Write the query in SQL to create the `order`relation.<span style="float: right; ">04 </span>
 **Ans:**
 ```sql
 CREATE TABLE orders (
@@ -61,8 +62,9 @@ CREATE TABLE orders (
 ```
 
 ---
-#### Question 3
-###### a. Consider the following relational schema for an online grocery shop database.<span style="float: right; ">02+03+03 </span>
+
+## Question 3
+#### a. Consider the following relational schema for an online grocery shop database.<span style="float: right; ">02+03+03 </span>
 *customer* (customer_id, customer_name, city, age)
 *product* (product_id, product_name, price, category)
 *order* (order_id, customer_id, product_id, quantity, order_date)
@@ -74,23 +76,24 @@ Write **relational algebra expressions** for each of the queries:
 3. Retrieve the names of warehouses that stock only products from the "Clothing" category.
 
 **Ans:** 
-1. $$\Pi_{customer\_{id},\space customer\_{name}}( \sigma_{category=\text{"Electronics"}}(order\bowtie product \bowtie customer))$$
-2. $$
-\begin{align*}
+1. $\Pi_{customer\_{id},\space customer\_{name}}( \sigma_{category=\text{"Electronics"}}(order\bowtie product \bowtie customer))$
+2. $
+\begin{align}
 \Big(\Pi_{\text{product\_{id}}}\big(\sigma_{\text{city="Dhaka"}}(\text{customer} \;\bowtie\; \text{order})\big)\Big)- \\ \Big(\Pi_{product\_id}\big(\sigma_{\text{warehouse}='Central\ Warehouse'}\space \land\space_{\text{quantity\_availabe=0}}(\text{stock})\big)\Big)
-\end{align*}$$
-3. $$\pi_{warehouse}\Big(\sigma_{\text{category} = 'Clothing'}(\text{stock} \;\bowtie\; \text{product})\Big)$$
-###### b. What is Data Manipulation Language?<span style="float: right; ">02 </span>
+\end{align}$
+3. $\Pi_{warehouse}\Big(\sigma_{\text{category} = 'Clothing'}(\text{stock} \;\bowtie\; \text{product})\Big)$
+#### b. What is Data Manipulation Language?<span style="float: right; ">02 </span>
 **Ans:**  A **data-manipulation language (DML)** is a language that enables users to access or manipulate data as organized by the appropriate data model. It is a subset of SQL used to **retrieve, insert, update, and delete data** in a database. It focuses on **manipulating data within existing tables**, not defining the schema (which is done by DDL).
 
 ---
-#### Question 4
+
+## Question 4
 Consider the following relational schema for an online grocery shop database.
 *customer* (customer_id, customer_name, city, age)
 *product* (product_id, product_name, price, category)
 *order* (order_id, customer_id, product_id, quantity, order_date)
 *stock* (product_id, warehouse, quantity_available)
-###### a. Write **query in SQL** for each of the following queries: <span style="float: right; ">03+04+03 </span>
+#### a. Write **query in SQL** for each of the following queries: <span style="float: right; ">03+04+03 </span>
 1. Show the customer IDs in the descending order who have ordered products in the "Electronics" category.
 2. Find the names of products that have been ordered by customers from the city "Dhaka" and display the total quantity ordered for each of those products.
 3. List the Product ID and Product Name of products that are currently out of stock in the "Central Warehouse".
@@ -123,7 +126,8 @@ WHERE quantity_available = 0 and warehouse = "Central Warehouse";
 ```
 
 ---
-#### Question 5
-###### a. Draw the **E-R Diagram** of a online grocery shop database considering three entities: *customer, product, order.*<span style="float: right; ">10 </span>
+
+## Question 5
+#### a. Draw the **E-R Diagram** of a online grocery shop database considering three entities: *customer, product, order.*<span style="float: right; ">10 </span>
 **Ans:** 
 ![E-R Diagram](../img/Pasted_image_20251014204033.png)
