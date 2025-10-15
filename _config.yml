@@ -8,4 +8,4 @@ kramdown:
   input: GFM
   math_engine: mathjax
   math_engine_opts: {}
-
+mathjax: true

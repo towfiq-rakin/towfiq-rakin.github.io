@@ -1,3 +1,8 @@
+---
+layout: default
+title: DBMS Mid Solution
+---
+
 #### Question 1
 ###### a. Present a comparative overview among the different levels of abstraction of a database management system. <span style="float: right; ">06 </span>
 
